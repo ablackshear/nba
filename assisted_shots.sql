@@ -139,17 +139,3 @@ on a.pbp_id = b.pbp_seq_number
 where a.textual_description like '%assist%'
 
 group by 1,2;
-
-SELECT 
-a.team_alias_1,
-a.detail_description,
-count(*) as assisted_shots,
-round(avg(a.distance),1) as avg_dist,
-sum(a.points_type) as pts
-
-
-FROM test.pbp a 
-
-where a.textual_description like '%assist%'
-
-group by 1,2;
